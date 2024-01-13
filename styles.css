@@ -88,3 +88,15 @@ footer {
 p{
     font-size: 14px;
 }
+
+#contact {
+    font-size: 16px;
+}
+
+#toinf {
+    font-size: 12px;
+}
+#contact a {
+    text-decoration: none; /* Remove underline */
+    color: pink;
+  }
