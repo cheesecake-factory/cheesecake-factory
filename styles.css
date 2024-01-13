@@ -3,6 +3,11 @@
     src: url('fonts/TheCheddarcakeFactory-pO5r.ttf') format('truetype');
 }
 
+body {
+    background-color: rgb(243, 193, 148);
+    font-family: 'Courier', monospace; /* Set default font to Courier */
+}
+
 .cheese {
     display: flex;
     justify-content: center;
@@ -16,11 +21,23 @@
 }
 
 .cheese .the {
-    margin-left: 20px; /* Adjust this value to push 'The' to the right */
-    font-size: 20px; /* Makes 'The' smaller */
+    margin-left: 20px;
+    font-size: smaller;
 }
 
 .cheese .spacing {
     display: inline-block;
     width: 10px;
+}
+
+.centered-column {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered-column p {
+    text-align: center;
+    max-width: 600px;
+
+    margin: 0 auto;
 }
