@@ -109,12 +109,26 @@ p{
 footer {
     /* Existing styles */
     position: relative; /* You may change this to 'static' for mobile view */
+    background-color: black;
 }
+body {
+    /* existing styles */
+    padding-bottom: 50px; /* Adjust this value based on your footer's height */
+}
+
 
 @media only screen and (max-width: 600px) {
     footer {
         position: static;
         width: 100%;
+    }
+
+    .cheese h1 {
+        font-family: 'cheese', sans-serif;
+        color: rgb(154, 32, 53);
+        text-align: left;
+        margin: 0;
+        font-size: 24px;
     }
     /* Other responsive adjustments */
 }
