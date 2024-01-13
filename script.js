@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update the currently playing track
     function updateCurrentlyPlaying(trackName) {
-        currentlyPlaying.textContent = `Currently Playing: ${trackName}`;
+        currentlyPlaying.textContent = `now playing... ${trackName}`;
     }
 
     // Function to play the next track

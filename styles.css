@@ -8,6 +8,26 @@ body {
     font-family: 'Courier', monospace; /* Set default font to Courier */
 }
 
+.work-in-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Removes vertical margin */
+    padding: 0; /* Removes vertical padding */
+}
+.work-in-progress h5 {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Adjust if needed */
+}
+
+
+.side-image {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px;
+    margin: 0 5px; /* Adds space between the image and the text */
+}
+
+
 .cheese {
     display: flex;
     justify-content: center;
@@ -17,7 +37,8 @@ body {
     font-family: 'cheese', sans-serif;
     color: rgb(154, 32, 53);
     text-align: left;
-    margin: 0;
+    margin-bottom: 0;
+    margin-top:5;
 }
 
 .cheese .the {
@@ -107,14 +128,42 @@ p{
 }
 
 footer {
-    /* Existing styles */
-    position: relative; /* You may change this to 'static' for mobile view */
-    background-color: black;
+    position: relative; /* or static */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(243, 193, 148);
+    color:  rgb(154, 32, 53);
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000; /* Ensure the footer stays on top */
 }
+
+body {
+    margin: 0; /* Remove default margin */
+    padding-bottom: 60px; /* Adjust this value to the height of your footer */
+}
+
+/* Fix for very tall content on smaller screens */
+@media only screen and (max-width: 600px) {
+    body {
+        padding-bottom: 70px; /* Adjust this value for mobile, if the footer height changes */
+    }
+}
+
 body {
     /* existing styles */
     padding-bottom: 50px; /* Adjust this value based on your footer's height */
+}html, body {
+    height: 100%; /* Make sure the body takes full height of the page */
+    margin: 0; /* Remove default margins */
 }
+
+.content-wrapper {
+    min-height: calc(100% - 60px); /* Adjust '60px' to the height of your footer */
+    /* Rest of your styles */
+}
+
 
 
 @media only screen and (max-width: 600px) {
