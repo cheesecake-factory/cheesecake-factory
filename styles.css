@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'cheese';
+    src: url('fonts/TheCheddarcakeFactory-pO5r.ttf') format('truetype');
+}
+
+.cheese {
+    display: flex;
+    justify-content: center;
+}
+
+.cheese h1 {
+    font-family: 'cheese', sans-serif;
+    color: rgb(154, 32, 53);
+    text-align: left;
+    margin: 0;
+}
+
+.cheese .the {
+    margin-left: 20px; /* Adjust this value to push 'The' to the right */
+    font-size: 20px; /* Makes 'The' smaller */
+}
+
+.cheese .spacing {
+    display: inline-block;
+    width: 10px;
+}
