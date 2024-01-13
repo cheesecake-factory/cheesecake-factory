@@ -118,8 +118,7 @@ p{
     font-size: 12px;
 }
 #contact a {
-    text-decoration: none; /* Remove underline */
-    color: pink;
+    color:  rgb(154, 32, 53);
   }
 
   img {
