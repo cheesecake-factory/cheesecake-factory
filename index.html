@@ -22,21 +22,25 @@
 
         <h1>heart/star i</h1>
 
-        <!-- Audio Player -->
-        <audio id="hsi" controls loop>
-            <source src="hsi/What.wav" type="audio/wav">
-            <source src="hsi/Vlog.wav" type="audio/wav">
-            <source src="hsi/V2.wav" type="audio/wav">
-            <!-- Add more <source> elements for each track -->
-            Your browser does not support the audio element.
-        </audio>
+
         <ul class="tracklist">
             <li><a href="#" data-src="hsi/What.wav">Track 1</a></li>
             <li><a href="#" data-src="hsi/Vlog.wav">Track 2</a></li>
             <!-- Add more tracklist items for each track -->
         </ul>
+            <!-- Audio Player -->
+            <audio id="hsi" controls>
+                <source src="hsi/What.wav" type="audio/wav">
+                <source src="hsi/Vlog.wav" type="audio/wav">
+                <source src="hsi/V2.wav" type="audio/wav">
+                <!-- Add more <source> elements for each track -->
+                Your browser does not support the audio element.
+            </audio>
     </div>
     <script src="script.js"></script>
-
+    <footer>
+        <div id="currentlyPlaying">playin... None</div>
+    </footer>
+    
 </body>
 </html>
