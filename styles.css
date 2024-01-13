@@ -100,3 +100,21 @@ p{
     text-decoration: none; /* Remove underline */
     color: pink;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    /* Existing styles */
+    position: relative; /* You may change this to 'static' for mobile view */
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        position: static;
+        width: 100%;
+    }
+    /* Other responsive adjustments */
+}
