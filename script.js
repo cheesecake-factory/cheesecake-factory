@@ -52,4 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
             updateCurrentlyPlaying("None"); // Update the currently playing text
         }
     });
+
+    // Event listener to handle the "play" button click on the audio player
+    audio.addEventListener('play', function () {
+        const currentTrack = tracklist[currentTrackIndex];
+        updateCurrentlyPlaying(currentTrack.textContent);
+    });
 });
