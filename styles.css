@@ -57,3 +57,30 @@ footer {
     position: relative;
     padding-bottom: 15px;
 }
+
+/* Remove bullets from the ul */
+.tracklist {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style the links within the ul and make them italic */
+.tracklist li a {
+    color: #000; /* Set the link color to black */
+    text-decoration: none; /* Remove underlines */
+    font-style: italic; /* Make the text italic */
+}
+
+/* Style visited links (if needed) */
+.tracklist li a:visited {
+    color: #000; /* Set the visited link color to black */
+}
+
+/* Add padding to each list item */
+.tracklist li {
+    padding: 3px 0; /* Add 5px padding top and bottom */
+}
+
+#cover {
+    width: 200px;
+}
