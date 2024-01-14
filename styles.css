@@ -166,7 +166,9 @@ body {
     font-family: 'cheese', sans-serif;
     color: rgb(154, 32, 53);
 }
-
+.star {
+    font-size: 30px;
+}
 
 
 @media only screen and (max-width: 600px) {
