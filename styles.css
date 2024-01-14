@@ -103,7 +103,7 @@ footer {
 }
 
 #cover {
-    width: 200px;
+    width: 400px;
 }
 
 p{
@@ -183,5 +183,7 @@ body {
         font-size: 12px;
         margin: 2px;
     }
-    /* Other responsive adjustments */
+    #cover {
+        width: 200px;
+    }
 }
