@@ -162,6 +162,10 @@ body {
     min-height: calc(100% - 60px); /* Adjust '60px' to the height of your footer */
     /* Rest of your styles */
 }
+#small-cake {
+    font-family: 'cheese', sans-serif;
+    color: rgb(154, 32, 53);
+}
 
 
 
@@ -180,7 +184,7 @@ body {
     }
 
     p {
-        font-size: 12px;
+        font-size: 10px;
         margin: 2px;
     }
     #cover {
