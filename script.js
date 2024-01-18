@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update the currently playing track
     function updateCurrentlyPlaying(trackName) {
-        currentlyPlaying.textContent = `now playing... ${trackName}`;
+        if (trackName) {
+            currentlyPlaying.textContent = `now playing... ${trackName}`;
+        } else {
+            currentlyPlaying.textContent = "roll up & press play...";
+        }
     }
 
     // Function to play the next track
@@ -24,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             audio.pause();
             audio.currentTime = 0; // Reset the playback position to the beginning
             currentTrackIndex = -1; // Reset the current track index to -1
-            updateCurrentlyPlaying("roll up & press play..."); // Update the currently playing text
+            updateCurrentlyPlaying(); // Reset the currently playing text to initial state
         }
     }
 
@@ -41,20 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Event listener to check when the current track ends
-    audio.addEventListener('ended', function () {
-        playNextTrack();
-    });
+    audio.addEventListener('ended', playNextTrack);
 
     // Event listener to handle the "play" button click on the audio player
     audio.addEventListener('play', function () {
         if (currentTrackIndex === -1) {
             playNextTrack(); // Automatically play the first track if none is currently selected
-        } else if (currentTrackIndex >= 0) {
-            const currentTrack = tracklist[currentTrackIndex];
-            updateCurrentlyPlaying(currentTrack.textContent);
         }
     });
 
     // Set the initial text for 'currentlyPlaying' when the page loads
-    updateCurrentlyPlaying("roll up & press play...");
+    updateCurrentlyPlaying();
 });
