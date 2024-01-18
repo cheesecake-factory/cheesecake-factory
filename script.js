@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tracklist = document.querySelectorAll('.tracklist a');
     const currentlyPlaying = document.getElementById('currentlyPlaying'); // Get the div element in the footer
 
-    let currentTrackIndex = 0; // Initialize the current track index
+    let currentTrackIndex = -1; // Initialize the current track index to -1
 
     // Function to update the currently playing track
     function updateCurrentlyPlaying(trackName) {
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // All tracks have been played, stop the audio player
             audio.pause();
             audio.currentTime = 0; // Reset the playback position to the beginning
-            currentTrackIndex = 0; // Reset the current track index
-            updateCurrentlyPlaying("None"); // Update the currently playing text
+            currentTrackIndex = -1; // Reset the current track index to -1
+            updateCurrentlyPlaying("roll up & press play..."); // Update the currently playing text
         }
     }
 
@@ -42,20 +42,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Event listener to check when the current track ends
     audio.addEventListener('ended', function () {
-        if (currentTrackIndex < tracklist.length - 1) {
-            playNextTrack();
-        } else {
-            // If it's the last track, stop the audio player
-            audio.pause();
-            audio.currentTime = 0; // Reset the playback position to the beginning
-            currentTrackIndex = 0; // Reset the current track index
-            updateCurrentlyPlaying("None"); // Update the currently playing text
-        }
+        playNextTrack();
     });
 
     // Event listener to handle the "play" button click on the audio player
     audio.addEventListener('play', function () {
-        const currentTrack = tracklist[currentTrackIndex];
-        updateCurrentlyPlaying(currentTrack.textContent);
+        if (currentTrackIndex === -1) {
+            playNextTrack(); // Automatically play the first track if none is currently selected
+        } else if (currentTrackIndex >= 0) {
+            const currentTrack = tracklist[currentTrackIndex];
+            updateCurrentlyPlaying(currentTrack.textContent);
+        }
     });
+
+    // Set the initial text for 'currentlyPlaying' when the page loads
+    updateCurrentlyPlaying("roll up & press play...");
 });
